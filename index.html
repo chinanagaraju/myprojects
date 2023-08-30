@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <!-- <script src='main.js'></script> -->
+  
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <button > welcome javascript </button>
+    <script src="index.js"></script>
+    <script src="cook.js"></script>
+    <div class="output">
+        <ul>
+
+        </ul>
+    </div>
+    <div class="outputs">
+        <ul>
+            
+        </ul>
+    </div>
+    <script>
+        const list=document.querySelector('.outputs');
+        list.innerHtml="";
+        let  cities=["mumBai","Delhi","goa"," jaipur"];
+        for( let i=0;i<cities.length;i++){
+            let city=cities[i].toLocaleLowerCase();
+       console.log(city);
+            let firstLetter=city.slice(0,1);
+            console.log(firstLetter);
+        
+           let reus=firstLetter.toLocaleUpperCase()+city.slice(1);
+            // console.log(reus);
+            let listItem=document.createElement("li");
+            listItem.textContent=reus;
+            list.appendChild(listItem);
+
+        }
+        const lis=["welcome to hyd"," happy holi",
+        " u can't drink that at all",
+        "u can join me on holi",
+        "can we meeet at holi"];
+        const lists= document.querySelector(".output");
+        lists.innerHTML="";
+        for( let i=0;i<lis.length;i++){
+            if(lis[i].indexOf("holi")!==-1){
+                let result=lis[i];
+                let st=document.createElement("li");
+                st.textContent=result;
+                lists.appendChild(st);
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
